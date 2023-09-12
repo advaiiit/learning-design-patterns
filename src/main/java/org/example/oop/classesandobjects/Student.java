@@ -28,7 +28,6 @@ public class Student {
         this.name = name;
     }
 
-
     public void study() {
         System.out.println(name + " is studying");
     }
