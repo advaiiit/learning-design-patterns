@@ -2,9 +2,14 @@ package org.example.prerequisite.oop.classesandobjects;
 
 public class Student {
 
+    // Instance variables
     int id;
     String name;
     String email;
+
+    // Every instance of the class shares the same static variable
+    // If changes are made to that variable, all other instances will see the effect of that change
+    static String university = "Stanford";
 
     // Non-parameterized constructor
     public Student() {}
@@ -28,7 +33,18 @@ public class Student {
         this.name = name;
     }
 
+    // Instance method
     public void study() {
         System.out.println(name + " is studying");
     }
+
+    // Static methods can't access instance variable/methods directly
+    // We can't use this method inside static method
+    // A method which does not use any instance variables should probably be declared a static method
+    static void showUniversity() {
+        // Best Practice: Use Class name and not reference variable to access a static variable
+        System.out.println("Student studies in " + Student.university + " university");
+    }
+
+
 }

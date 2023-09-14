@@ -15,5 +15,9 @@ public class Demo {
 
         Student student3 = new Student(3, "James Doe");
         System.out.println(student3.id);
+
+        // An instance isn't required to access the value of a static variable/method
+        System.out.println(Student.university);
+        Student.showUniversity();
     }
 }
