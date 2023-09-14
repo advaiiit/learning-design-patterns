@@ -1,4 +1,4 @@
-package org.example.oop.classesandobjects;
+package org.example.prerequisite.oop.classesandobjects;
 
 public class Student {
 
