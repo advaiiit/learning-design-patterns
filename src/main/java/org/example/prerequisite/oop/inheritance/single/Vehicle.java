@@ -10,7 +10,19 @@ class Vehicle {
 class Car extends Vehicle {
 
     public void openTrunk() {
-        System.out.println(this.getClass().getSimpleName() + "'s trunk is opening");
+        System.out.println("Car's trunk is opening");
+    }
+
+    // Overriding a method is when you create a method on a subclass,
+    // which has the same signature as a method on a super class.
+
+    // Override a parent class method when you want the child class
+    // to show different behavior for that method.
+
+    @Override
+    public void start() {
+        super.start();
+        System.out.println("Car will stop once it reaches it's destination.");
     }
 }
 
@@ -20,7 +32,7 @@ class Demo {
         vehicle.start();
 
         Car car = new Car();
-        car.start();
         car.openTrunk();
+        car.start();
     }
 }
