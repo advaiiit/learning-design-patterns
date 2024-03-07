@@ -2,7 +2,8 @@ package org.example.prerequisite.oop.inheritance.multilevel;
 
 class Account {
 
-    // Accessible from subclass as well as within the same package
+    // Using protected access modifier so that variable is
+    // accessible from subclass as well as within the same package
     protected String accountNumber;
 
     public Account(String accountNumber) {
